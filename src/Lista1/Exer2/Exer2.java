@@ -12,7 +12,7 @@ package Lista1.Exer2;
 public class Exer2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Exer2
+     * Creates new form NewJFrame
      */
     public Exer2() {
         initComponents();
@@ -27,26 +27,44 @@ public class Exer2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Semaforo1 = new javax.swing.JLabel();
+        Semaforo2 = new javax.swing.JLabel();
+        Semaforo3 = new javax.swing.JLabel();
+        Semaforo4 = new javax.swing.JLabel();
+        Fundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/fundo.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
+        jPanel1.setPreferredSize(new java.awt.Dimension(500, 375));
+        jPanel1.setRequestFocusEnabled(false);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Semaforo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/verm.png"))); // NOI18N
+        jPanel1.add(Semaforo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, -1, -1));
+
+        Semaforo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/verm.png"))); // NOI18N
+        jPanel1.add(Semaforo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 10, 40));
+
+        Semaforo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/verm.png"))); // NOI18N
+        jPanel1.add(Semaforo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 20, 40));
+
+        Semaforo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/verm.png"))); // NOI18N
+        jPanel1.add(Semaforo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 30, 50));
+
+        Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/fundo.png"))); // NOI18N
+        Fundo.setText("'");
+        jPanel1.add(Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addGap(0, 2, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -78,6 +96,7 @@ public class Exer2 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Exer2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -88,7 +107,11 @@ public class Exer2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel Fundo;
+    private javax.swing.JLabel Semaforo1;
+    private javax.swing.JLabel Semaforo2;
+    private javax.swing.JLabel Semaforo3;
+    private javax.swing.JLabel Semaforo4;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
-    
 }
