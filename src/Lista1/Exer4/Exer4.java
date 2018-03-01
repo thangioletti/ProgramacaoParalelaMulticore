@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Lista1.Exer3;
+package Lista1.Exer4;
 
 import javax.swing.ImageIcon;
 
@@ -11,19 +11,19 @@ import javax.swing.ImageIcon;
  *
  * @author angioletti
  */
-public class Exer3 extends javax.swing.JFrame {
+public class Exer4 extends javax.swing.JFrame {
 
-    public Exer3() {
+    public Exer4() {
         initComponents();                        
         
         
-        Thread oThread1 = new Thread(new Semaforo(0, 0, 0)); //INICIA VERMELHO
+        Thread oThread1 = new Thread(new Semaforo(0, 2, 4500)); //INICIA VERMELHO
         oThread1.start();
-        Thread oThread2 = new Thread(new Semaforo(1, 0, 4500)); //INICIAR VERMELHO
+        Thread oThread2 = new Thread(new Semaforo(1, 0, 0)); //INICIAR VERMELHO
         oThread2.start();
-        Thread oThread3 = new Thread(new Semaforo(2, 0, 0)); //INICIAR VERMELHO
+        Thread oThread3 = new Thread(new Semaforo(2, 0, 6000)); //INICIAR VERMELHO
         oThread3.start();
-        Thread oThread4 = new Thread(new Semaforo(3, 0, 4500)); //INICIAR VERMELHO
+        Thread oThread4 = new Thread(new Semaforo(3, 0, 10500)); //INICIAR VERMELHO
         oThread4.start();
         
     }
@@ -45,7 +45,7 @@ public class Exer3 extends javax.swing.JFrame {
         jPanel1.setRequestFocusEnabled(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Semaforo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/vermelho.png"))); // NOI18N
+        Semaforo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/verde.png"))); // NOI18N
         jPanel1.add(Semaforo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
 
         Semaforo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/vermelho.png"))); // NOI18N
@@ -80,7 +80,7 @@ public class Exer3 extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Exer3().setVisible(true);
+                new Exer4().setVisible(true);
             }
         });
     }                                  
