@@ -46,17 +46,17 @@ public class Exer3 extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Semaforo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/vermelho.png"))); // NOI18N
-        jPanel1.add(Semaforo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+        jPanel1.add(Semaforo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, -1, -1));
 
         Semaforo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/vermelho.png"))); // NOI18N
-        jPanel1.add(Semaforo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 30, 40));
+        jPanel1.add(Semaforo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 30, 80));
 
         Semaforo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/vermelho.png"))); // NOI18N
         Semaforo3.setToolTipText("");
-        jPanel1.add(Semaforo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 20, 40));
+        jPanel1.add(Semaforo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 30, 80));
 
         Semaforo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/vermelho.png"))); // NOI18N
-        jPanel1.add(Semaforo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 30, 50));
+        jPanel1.add(Semaforo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 30, 80));
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lista1/Exer2/fundo.png"))); // NOI18N
         Fundo.setText("'");
