@@ -17,7 +17,7 @@ public class Run extends javax.swing.JFrame {
     public Run() {
         initComponents();
         
-        Pacman oPac = new Pacman(1,2);
+        Pacman oPac = new Pacman(1,1);
         
         Thread th1 = new Thread(oPac);
         th1.start();
