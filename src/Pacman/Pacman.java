@@ -65,19 +65,20 @@ public class Pacman implements Runnable{
             }
         }
 
-        
-        switch (this.getiOpen()){
-            case 1: //Boca Aberta
-                sNameImage += "open-"+sSide;                                                    
-                break;
-            case 2: //Boca Aberta
-                sNameImage += "opening-"+sSide;                                                    
-                break;
-            case 3: //Boca fechada
-                sNameImage += "close";
-                break;
-            default:
-                break;                
+        {//Aberto ou fechado
+            switch (this.getiOpen()){
+                case 1: //Boca Aberta
+                    sNameImage += "open-"+sSide;                                                    
+                    break;
+                case 2: //Boca Aberta
+                    sNameImage += "opening-"+sSide;                                                    
+                    break;
+                case 3: //Boca fechada
+                    sNameImage += "close";
+                    break;
+                default:
+                    break;                
+            }
         }
         
         {//TROCA POSIÇÃO DE ABERTO E FECHADO

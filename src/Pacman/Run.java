@@ -5,6 +5,8 @@
  */
 package Pacman;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author angioletti
@@ -14,15 +16,39 @@ public class Run extends javax.swing.JFrame {
     /**
      * Creates new form Run
      */
+    
+    static Ghost aGhosts[] = new Ghost[3];
+    
     public Run() {
         initComponents();
         
-        Pacman oPac = new Pacman(1,2);
+        Pacman oPac = new Pacman(1,4);
+        aGhosts[0] = new Ghost(0, "cyan");
+        aGhosts[1] = new Ghost(1, "pink");
+        //aGhosts[2] = new Ghost(2, "blue");
         
         Thread th1 = new Thread(oPac);
         th1.start();
+        
+        Thread th2 = new Thread(aGhosts[0]);
+        th2.start();
+        
+        Thread th3 = new Thread(aGhosts[1]);
+        th3.start();
     }
-
+    
+    public static void animateGhost(int iCodGhost, ImageIcon oIcon){
+        switch (iCodGhost) {
+            case 0:
+                Ghost1.setIcon(oIcon);
+                break;
+            case 1:
+                Ghost2.setIcon(oIcon);
+                break;
+            default:
+                break;
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,6 +59,8 @@ public class Run extends javax.swing.JFrame {
     private void initComponents() {
 
         Pacman = new javax.swing.JLabel();
+        Ghost1 = new javax.swing.JLabel();
+        Ghost2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,16 +71,29 @@ public class Run extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(Pacman)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(Pacman))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(Ghost1)))
                 .addContainerGap(212, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Ghost2)
+                .addGap(133, 133, 133))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Pacman)
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addComponent(Ghost1)
+                .addGap(67, 67, 67)
+                .addComponent(Ghost2)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
 
         pack();
@@ -94,6 +135,8 @@ public class Run extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JLabel Ghost1;
+    public static javax.swing.JLabel Ghost2;
     public static javax.swing.JLabel Pacman;
     // End of variables declaration//GEN-END:variables
 }
