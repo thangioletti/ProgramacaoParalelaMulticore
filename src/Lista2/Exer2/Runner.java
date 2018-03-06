@@ -54,7 +54,7 @@ public class Runner implements Runnable{
     }
        
     private void increment() {
-      int iResult = this.r.nextInt(50);
+      int iResult = this.r.nextInt(20);
       this.setiPos(this.getiPos()+iResult);
       
       if (this.getiPos() > this.getiFinish()) {
@@ -69,7 +69,7 @@ public class Runner implements Runnable{
             this.increment();
             
             try {
-              Thread.sleep(100);
+              Thread.sleep(50);
             } catch (InterruptedException ex) {
               System.out.println("Thread interrompida");
             }
