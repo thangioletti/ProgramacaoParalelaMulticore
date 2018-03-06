@@ -5,6 +5,7 @@
  */
 package Pacman;
 
+import java.time.Clock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -96,6 +97,7 @@ public class Pacman implements Runnable{
         }
         
         sNameImage+=".png";
+        System.out.println(sNameImage);
         
         ImageIcon oIcon = new ImageIcon(getClass().getResource(sNameImage));
         Run.Pacman.setIcon(oIcon);
