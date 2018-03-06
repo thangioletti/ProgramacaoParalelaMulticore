@@ -80,8 +80,7 @@ public class Ghost implements Runnable{
                 Logger.getLogger(Pacman.class.getName()).log(Level.SEVERE, null, ex);
             }
             
-            this.Animation();                       
-             System.out.println("Ghost");
+            this.Animation();
         }
     }
     

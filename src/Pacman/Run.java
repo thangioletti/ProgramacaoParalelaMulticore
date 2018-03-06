@@ -17,16 +17,17 @@ public class Run extends javax.swing.JFrame {
      * Creates new form Run
      */
     
-    static Ghost aGhosts[] = new Ghost[3];
+    static Ghost aGhosts[] = new Ghost[4];
     
     public Run() {
         initComponents();
         
         Pacman oPac = new Pacman(1,4);
         aGhosts[0] = new Ghost(0, "cyan");
-        aGhosts[1] = new Ghost(1, "pink");
-        //aGhosts[2] = new Ghost(2, "blue");
-        
+        aGhosts[1] = new Ghost(1, "hollow");
+        aGhosts[2] = new Ghost(2, "pink");
+        aGhosts[3] = new Ghost(3, "orange");
+                
         Thread th1 = new Thread(oPac);
         th1.start();
         
@@ -35,6 +36,12 @@ public class Run extends javax.swing.JFrame {
         
         Thread th3 = new Thread(aGhosts[1]);
         th3.start();
+        
+        Thread th4 = new Thread(aGhosts[2]);
+        th4.start();
+        
+        Thread th5 = new Thread(aGhosts[3]);
+        th5.start();
     }
     
     public static void animateGhost(int iCodGhost, ImageIcon oIcon){
@@ -44,6 +51,12 @@ public class Run extends javax.swing.JFrame {
                 break;
             case 1:
                 Ghost2.setIcon(oIcon);
+                break;
+            case 2:
+                Ghost3.setIcon(oIcon);
+                break;
+            case 3:
+                Ghost4.setIcon(oIcon);
                 break;
             default:
                 break;
@@ -61,6 +74,8 @@ public class Run extends javax.swing.JFrame {
         Pacman = new javax.swing.JLabel();
         Ghost1 = new javax.swing.JLabel();
         Ghost2 = new javax.swing.JLabel();
+        Ghost3 = new javax.swing.JLabel();
+        Ghost4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,23 +92,38 @@ public class Run extends javax.swing.JFrame {
                         .addComponent(Pacman))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(123, 123, 123)
-                        .addComponent(Ghost1)))
+                        .addComponent(Ghost1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(Ghost3)))
                 .addContainerGap(212, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Ghost2)
-                .addGap(133, 133, 133))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Ghost2)
+                        .addGap(133, 133, 133))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Ghost4)
+                        .addGap(47, 47, 47))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Pacman)
-                .addGap(52, 52, 52)
-                .addComponent(Ghost1)
-                .addGap(67, 67, 67)
-                .addComponent(Ghost2)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Ghost4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Pacman)
+                        .addGap(52, 52, 52)
+                        .addComponent(Ghost1)
+                        .addGap(67, 67, 67)
+                        .addComponent(Ghost2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                        .addComponent(Ghost3)))
+                .addGap(47, 47, 47))
         );
 
         pack();
@@ -137,6 +167,8 @@ public class Run extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JLabel Ghost1;
     public static javax.swing.JLabel Ghost2;
+    public static javax.swing.JLabel Ghost3;
+    public static javax.swing.JLabel Ghost4;
     public static javax.swing.JLabel Pacman;
     // End of variables declaration//GEN-END:variables
 }
