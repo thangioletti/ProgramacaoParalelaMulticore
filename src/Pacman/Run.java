@@ -22,7 +22,7 @@ public class Run extends javax.swing.JFrame {
     public Run() {
         initComponents();
         
-        Pacman oPac = new Pacman(1,4);
+        Pacman oPac = new Pacman(1,3);
         aGhosts[0] = new Ghost(0, "cyan");
         aGhosts[1] = new Ghost(1, "hollow");
         aGhosts[2] = new Ghost(2, "pink");
