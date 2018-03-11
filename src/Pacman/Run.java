@@ -27,6 +27,7 @@ public class Run extends javax.swing.JFrame {
         aGhosts[1] = new Ghost(1, "hollow");
         aGhosts[2] = new Ghost(2, "pink");
         aGhosts[3] = new Ghost(3, "orange");
+        Jlayer musica = new Jlayer();
                 
         Thread th1 = new Thread(oPac);
         th1.start();
@@ -42,6 +43,9 @@ public class Run extends javax.swing.JFrame {
         
         Thread th5 = new Thread(aGhosts[3]);
         th5.start();
+        
+        musica.main(null);
+        
     }
     
     public static void animateGhost(int iCodGhost, ImageIcon oIcon){
