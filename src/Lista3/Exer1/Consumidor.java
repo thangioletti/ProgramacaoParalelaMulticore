@@ -1,32 +1,31 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Lista3.Exer1;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-public class Consumidor implements Runnable{    
-    private final Buffer sharedLocation;
-    private int fib;   
-    
-    public Consumidor(Buffer shared){
-        sharedLocation = shared;
-    }
-    
-    public void run(){        
-        for(int i = 1; i <= fib; i++){           
-            try {                
-                System.out.println("Consumidor leu que fib("+i+") = "+sharedLocation.get());
+
+/**
+ *
+ * @author angioletti
+ */
+public class Consumidor implements Runnable {
+
+    public void run() {
+        while (true) {
+            int iDel = Exer1.Delete();
+
+            if (iDel != -1) {
+                System.out.println("Consumidor: " + iDel);
+            }
+
+            try {
+                Thread.sleep(500);
             } catch (InterruptedException ex) {
-                Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
-            }            
-        }       
+                System.out.println("Thread interrompida");
+            }
+
+        }
     }
 
-    public int getFib() {
-        return fib;
-    }
-
-    public void setFib(int fib) {
-        this.fib = fib;
-    }
-    
-    
-    
 }

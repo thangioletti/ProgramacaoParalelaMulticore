@@ -14,7 +14,7 @@ public class Main {
         BufferSincronizadoCircular sharedLocation = new BufferSincronizadoCircular();
         
         
-         aplicacao.execute(new Leitor(sharedLocation,1));       
+        aplicacao.execute(new Leitor(sharedLocation,1));       
         aplicacao.execute(new Escritor(sharedLocation,1));
        
         
