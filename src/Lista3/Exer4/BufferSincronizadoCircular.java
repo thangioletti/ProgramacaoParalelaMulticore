@@ -1,4 +1,4 @@
-package Lista3Exer4;
+package Lista3.Exer4;
 
 public class BufferSincronizadoCircular implements Buffer{
     private int[] buffer = {-1, -1, -1};

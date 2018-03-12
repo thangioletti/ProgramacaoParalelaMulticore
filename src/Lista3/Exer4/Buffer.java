@@ -1,4 +1,4 @@
-package Lista3Exer4;
+package Lista3.Exer4;
 
 public interface Buffer {
     public void set (int valor, int id) throws InterruptedException;

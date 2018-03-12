@@ -1,4 +1,4 @@
-package Lista3Exer5;
+package Lista3.Exer5;
 
 import java.util.Random;
 import java.util.logging.Level;

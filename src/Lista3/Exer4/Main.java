@@ -1,7 +1,11 @@
-package Lista3Exer4;
+package Lista3.Exer4;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+/**
+ *
+ * @author angioletti
+ */
 public class Main {
 
     public static void main(String[] args) {       

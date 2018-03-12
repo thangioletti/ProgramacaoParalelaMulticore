@@ -14,7 +14,7 @@ public class Jlayer {
 	public static void main(String[] args) {
  
 		// STRING COM O CAMINHO DO ARQUIVO MP3 A SER TOCADO
-		String path = "Pacman.sound/pacman_ringtone.mp3";
+		String path = "Pacman/sound/pacman_ringtone.mp3";
  
 		// INSTANCIAÇÃO DO OBJETO FILE COM O ARQUIVO MP3
 		File mp3File = new File(path);

@@ -1,4 +1,4 @@
-package Lista3Exer5;
+package Lista3.Exer5;
 public class Main {
     public static void main(String[] args) {
         Garfos g1 = new Garfos(1, 5);
